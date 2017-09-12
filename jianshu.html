@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2017 by cinyearchan (http://js.jirengu.com/noqon/12/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+/* 对比*/
+body{
+  background: #e9e9e9;
+}
+/* 头像*/
+.pic>img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+/* 封面*/
+.cover>img{
+  width: 300px;
+  height: 200px;
+  border-radius: 6px;
+}
+
+.layout{
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  padding-bottom: 10px;
+  width: 900px;
+  min-height: 200px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+/* BFC*/
+.side:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.side{
+  display: inline-block;
+  float: left;
+}
+.right{
+  margin-left: 20px;
+}
+.header>div{
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .time{
+  color: rgb(150, 150, 150);
+}
+.side>.title, .side>.content{
+  max-width: 580px;
+}
+.side .title{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.side .content{
+  white-space: normal;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  overflow: hidden;
+}
+.side .tag{
+  margin-top: 10px;
+  width: 45px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 14px;
+  color: rgb(234, 114, 93);
+  border: 1px solid rgb(234, 114, 93);
+}
+</style>
+</head>
+
+<body>
+  <div class="layout">
+    <div class="side left">
+      <div class="header">
+        <div class="pic">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504542271285&di=c1498496ced5edf6cab0d14e0b9a3bb4&imgtype=0&src=http%3A%2F%2Fimg22.mtime.cn%2Fup%2F2011%2F03%2F26%2F112632.86907484_500.jpg" alt="">
+        </div>
+        <span class="name">梵高</span>
+        <span class="time">8 小时前</span>
+      </div>
+      <h3 class="title">坚持“画画”这些年，人生真是太值了</h3>
+      <div class="content">荷兰后印象派画家。他是表现主义的先驱，并深深影响了二十世纪艺术，尤其是野兽派与德国表现主义...</div>
+      <div class="tag">绘画</div>
+    </div>
+    <div class="side right">
+      <div class="cover">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504542313665&di=7b815a3ea8425115ec3b23179945a448&imgtype=0&src=http%3A%2F%2Fimg.weixinyidu.com%2F160317%2Feba6511f.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
